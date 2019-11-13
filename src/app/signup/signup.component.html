@@ -1,0 +1,90 @@
+<section class="login-page">
+  <div class="home-btn d-none d-sm-block">
+    <a routerLink="/"><i class="fas fa-home h2 text-dark"></i></a>
+  </div>
+
+  <div class="account-pages mt-5 mb-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 col-xl-5">
+          <div class="text-center">
+            <a routerLink="/">
+              <span><img src="assets/images/logo.png" alt="" height="70"/></span>
+            </a>
+            <p class="text-muted mt-2 mb-4">مدارس دووم الدولية</p>
+          </div>
+          <div class="card border-0 shadow-lg">
+            <div class="card-body p-4">
+              <div class="text-center mb-4">
+                <h4 class="text-uppercase mt-0">إنشاء حساب</h4>
+              </div>
+
+              <form #f="ngForm" (ngSubmit)="signup(f)">
+                <div class="form-group mb-3">
+                    <label for="">الإسم بالكامل</label>
+                    <input ngModel #name="ngModel" name="name" class="form-control" type="text" required placeholder="أدخل الإسم بالكامل"/>
+                    <p class="alert text-danger small font-weight-bold font-italic m-0 p-0" *ngIf="name.invalid && name.touched">Name Is Required</p>
+                  </div>
+                <div class="form-group mb-3">
+                  <label for="">البريد الإلكتروني</label>
+                  <input ngModel #email="ngModel" class="form-control" type="email" name="email" required email placeholder="أدخل البريد الإلكتروني"/>
+                  <div class="alert text-danger small font-weight-bold font-italic m-0 p-0" *ngIf="email.touched && email.errors?.required">Email Is Required</div>
+                  <div class="alert text-danger small font-weight-bold font-italic m-0 p-0" *ngIf="email.touched && email.errors?.email">Your Email doesn't Match Email Format</div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="">كلمة المرور</label>
+                  <input ngModel #password="ngModel" name="password" class="form-control" type="password" required minlength="6" placeholder="أدخل كلمة المرور"/>
+                  <div class="alert text-danger small font-weight-bold font-italic m-0 p-0" *ngIf="password.touched && password.errors?.required">Password Is Required</div>
+                  <div class="alert text-danger small font-weight-bold font-italic m-0 p-0" *ngIf="password.touched && password.errors?.minlength">Password Should Be Equal 6+ Charchters</div>
+                </div>
+                <div class="form-group mb-3">
+                  <label for="">تأكيد كلمة المرور</label>
+                  <input ngModel #confirmpassword="ngModel" name="confirmpassword" class="form-control" type="password" required id="confirmpassword" placeholder="أدخل تأكيد كلمة المرور"/>
+                  <div class="alert text-danger small font-weight-bold font-italic m-0 p-0" *ngIf="confirmpassword.touched && confirmpassword.invalid">Password Confirm Is Required</div>
+                  <div class="alert text-danger small font-weight-bold font-italic m-0 p-0" *ngIf="confirmpassword.touched && confirmpassword.value !== password.value">Password Aren't Equal 6+ Charchters</div>
+                </div>
+                <div class="form-group mb-3">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="checkbox-signin" checked/>
+                    <label class="custom-control-label" for="checkbox-signin">
+                      <a href="javascript: void(0);" class="text-dark">أوافق علي الشروط و الأحكام</a>
+                    </label>
+                  </div>
+                </div>
+                
+
+                <div class="form-group mb-0 text-center">
+                  <button [disabled]="f.invalid || confirmpassword.value !== password.value" class="btn btn-primary btn-block" type="submit">
+                    إنشاء حساب
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- end card-body -->
+          </div>
+          <!-- end card -->
+
+          <div class="row mt-3">
+            <div class="col-12 text-center">
+              
+              <p class="text-muted">
+                 لديك حساب؟
+                <a routerLink="/login" class="text-dark ml-1"
+                  ><b>تسجيل دخول</b></a
+                >
+              </p>
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end page -->
+</section>
+

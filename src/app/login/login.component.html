@@ -1,0 +1,84 @@
+<section class="login-page">
+
+  <div class="account-pages mt-5 mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-6 col-xl-5">
+          <div class="text-center">
+            <a routerLink="/">
+              <span>
+                المركز الطبي الجامعى
+              </span>
+            </a>
+            <p class="text-muted mt-2 mb-4">
+              {{ 'Toolbar.English' | translate }}
+            </p>
+          </div>
+          <div class="card border-0 shadow-lg">
+            <div class="card-body p-4">
+              <div class="text-center mb-4">
+                <h4 class="text-uppercase mt-0">تسجيل الدخول</h4>
+              </div>
+
+              <form action="#">
+                <div class="form-group mb-3">
+                  <label for="emailaddress">البريد الإلكتروني</label>
+                  <input class="form-control" type="email" id="emailaddress" required placeholder="أدخل البريد الإلكتروني"/>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="password">كلمة المرور</label>
+                  <input class="form-control" type="password" required id="password" placeholder="أدخل كلمة المرور"/>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group mb-3">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkbox-signin" checked/>
+                        <label class="custom-control-label" for="checkbox-signin">تذكرني</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <p class="float-right">
+                      <a href="#" class="text-muted ml-1"
+                        ><i class="fa fa-lock mr-1"></i>نسيت كلمة المرور</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                
+
+                <div class="form-group mb-0 text-center">
+                  <button routerLink="/dashboard" (click)="onLoggedin()" class="btn btn-primary btn-block" type="submit">
+                    تسجيل الدخول
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- end card-body -->
+          </div>
+          <!-- end card -->
+
+          <div class="row mt-3">
+            <div class="col-12 text-center">
+              
+              <p class="text-muted">
+                ليس لديك حساب؟
+                <a routerLink="/signup" class="text-dark ml-1"
+                  ><b>إنشاء حساب جديد</b></a
+                >
+              </p>
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end page -->
+</section>

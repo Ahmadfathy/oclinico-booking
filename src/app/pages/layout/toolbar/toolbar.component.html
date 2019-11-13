@@ -1,0 +1,185 @@
+<!-- Topbar Start -->
+<div class="navbar-custom">
+    <div class="container-fluid">
+      <ul class="list-unstyled topnav-menu float-right mb-0">
+        <li class="dropdown notification-list">
+          <!-- Mobile menu toggle-->
+          <a class="navbar-toggle nav-link">
+            <div class="lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+          <!-- End mobile menu toggle-->
+        </li>
+        <!-- <li class="d-none d-sm-block">
+          <form class="app-search">
+            <div class="app-search-box">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                  <button class="btn" type="submit">
+                  <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </li> -->
+        <li class="dropdown notification-list">
+          <a class="nav-link dropdown-toggle waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+          <i class="far fa-bell noti-icon"></i>
+          <span class="badge badge-danger rounded-circle noti-icon-badge">9</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-left dropdown-lg">
+            <!-- item-->
+            <div class="dropdown-item noti-title">
+              <h5 class="m-0">
+                <span class="float-right">
+                  <a href="" class="text-dark"><small>عرض الكل</small></a>
+                </span>الإشعارات
+              </h5>
+            </div>
+            <div class="slimscroll noti-scroll">
+              <!-- item-->
+              <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                <div class="notify-icon">
+                  <img src="assets/images/user.jpg" class="img-fluid rounded-circle" alt="" /> 
+                </div>
+                <p class="notify-details">عنوان</p>
+                <p class="text-muted mb-0 user-msg">
+                  <small>و منين نجيب الصبر يا اهل الله يداوينا</small>
+                </p>
+              </a>
+              <!-- item-->
+              <a href="javascript:void(0);" class="dropdown-item notify-item">
+                <div class="notify-icon bg-primary">
+                  <i class="fas fa-flag"></i>
+                </div>
+                <p class="notify-details"> لوريم ايبسيم لوريم ايبسيم لوريم ايبسيم
+                  <small class="text-muted">منذ 1 دقيقة</small>
+                </p>
+              </a>
+              <!-- item-->
+              <a href="javascript:void(0);" class="dropdown-item notify-item">
+                <div class="notify-icon">
+                  <img src="assets/images/user-4.jpg" class="img-fluid rounded-circle" alt="" /> 
+                </div>
+                <p class="notify-details">عنوان</p>
+                <p class="text-muted mb-0 user-msg">
+                  <small>و منين نجيب الصبر يا اهل الله يداوينا</small>
+                </p>
+              </a>
+              <!-- item-->
+              <a href="javascript:void(0);" class="dropdown-item notify-item">
+                <div class="notify-icon bg-warning">
+                  <i class="far fa-comment"></i>
+                </div>
+                <p class="notify-details"> لوريم ايبسيم لوريم ايبسيم لوريم ايبسيم
+                  <small class="text-muted">منذ 1 دقيقة</small>
+                </p>
+              </a>
+              <!-- item-->
+              <a href="javascript:void(0);" class="dropdown-item notify-item">
+                <div class="notify-icon bg-info">
+                  <i class="far fa-comment"></i>
+                </div>
+                <p class="notify-details"> لوريم ايبسيم لوريم ايبسيم لوريم ايبسيم
+                  <small class="text-muted">منذ 1 دقيقة</small>
+                </p>
+              </a>
+              <!-- item-->
+              <a href="javascript:void(0);" class="dropdown-item notify-item">
+                <div class="notify-icon bg-secondary">
+                  <i class="far fa-comment-dots"></i>
+                </div>
+                <p class="notify-details"> لوريم ايبسيم لوريم ايبسيم لوريم ايبسيم
+                  <small class="text-muted">منذ 1 دقيقة</small>
+                </p>
+              </a>
+            </div>
+            <!-- All-->
+            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+            View all
+            <i class="fi-arrow-right"></i>
+            </a>
+          </div>
+        </li>
+        <li class="dropdown notification-list">
+          <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+          <img src="assets/images/user-1.jpg" alt="user-image" class="rounded-circle">
+          <span class="pro-user-name ml-1">
+          البحراوي <i class="fas fa-chevron-down"></i>
+          </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-left profile-dropdown ">
+            <!-- item-->
+            <div class="dropdown-header noti-title">
+              <h6 class="text-overflow m-0">مرحباً !</h6>
+            </div>
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <i class="fe-user"></i>
+            <span>حسابي</span>
+            </a>
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <i class="fe-settings"></i>
+            <span>الإعدادات</span>
+            </a>
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <i class="fe-lock"></i>
+            <span>قفل الشاشة</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <!-- item-->
+            <a  [routerLink]="['/login']" (click)="onLoggedout()" class="dropdown-item notify-item">
+            <i class="fe-log-out"></i>
+            <span>تسجيل خروج</span>
+            </a>
+          </div>
+        </li>
+        <li class="dropdown notification-list">
+          <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+            <img src="assets/images/translate.png" alt="user-image" class="rounded-circle">
+            <span class="pro-user-name ml-1">
+              {{ 'Toolbar.Language' | translate }} <i class="fas fa-chevron-down"></i>
+            </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-left profile-dropdown ">
+            <a href="javascript:void(0)" class="dropdown-item notify-item" (click)="changeLang('ar')">
+              {{ 'Toolbar.Arabic' | translate }}
+            </a>
+            <a href="javascript:void(0)" class="dropdown-item notify-item" (click)="changeLang('en')">
+              {{ 'Toolbar.English' | translate }}
+            </a>
+          </div>
+        </li>
+        <!-- <li class="dropdown notification-list">
+          <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect">
+          <i class="fas fa-cog"></i>
+          </a>
+        </li> -->
+      </ul>
+
+      
+
+      <!-- LOGO -->
+      <div class="logo-box">
+        <a href="index.html" class="logo text-center">
+          <span class="logo-lg">
+            <img src="assets/images/logo-light-text.png" alt="" />
+            <!-- <span class="logo-lg-text-light">UBold</span> -->
+          </span>
+          <span class="logo-sm">
+            <!-- <span class="logo-sm-text-dark">U</span> -->
+            <!-- <img src="assets/images/logo-sm.png" alt="" height="24" /> -->
+          </span>
+        </a>
+      </div>
+    </div>
+    <!-- end container-fluid-->
+  </div>
+  <!-- end Topbar -->
