@@ -9,7 +9,8 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
-      { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) }
+      { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
+      { path: 'mentions', loadChildren:() => import('./mentions/mentions.module').then(m => m.MentionsModule)}
     ]
   }
 ];
