@@ -15,7 +15,7 @@ import { FooterComponent } from './layout/footer/footer.component';
     CommonModule,
     PagesRoutingModule,
     NgbModule,
-    TranslateModule
+    TranslateModule,
   ]
 })
-export class PagesModule { }
+export class PagesModule {}

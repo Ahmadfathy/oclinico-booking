@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
   overflow-x: hidden;
   background-color: #FFF;
   direction: ltr;
@@ -20,13 +20,13 @@ a, a:hover, a:focus, a:active {
 /* ======= //End Global ======= */
 
 @media (min-width: 1200px) {
-  .container-fluid {
+  .container-fluid-90 {
     max-width: 90%;
   }
 }
 
 .wrapper {
-  padding: 130px 12px 0 12px;
+  padding: 130px 12px 60px 12px;
 }
 
 #topnav {
@@ -806,12 +806,12 @@ a, a:hover, a:focus, a:active {
 }
 
 .footer {
-  bottom: 0;
+  /* bottom: 0; */
   padding: 19px 15px 20px;
-  position: absolute;
-  right: 0;
+  /* position: absolute; */
+  /* right: 0; */
   color: #98a6ad;
-  left: 0;
+  /* left: 0; */
   background-color: #e3e9ed;
 }
 
@@ -5328,7 +5328,15 @@ div.hopscotch-bubble .hopscotch-content {
   font-size: 0.9rem;
   padding: 5px 8px;
 }
-
+/*=============================
+Overriding DatePicker Style
+=============================*/
+.theme-green .bs-datepicker-head {
+  background-color: #3587d8;
+}
+.theme-green .bs-datepicker-body table td.week span {
+  color: #3587d8;
+}
 
 /*===============================
 RTL
