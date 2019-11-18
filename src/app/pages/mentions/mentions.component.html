@@ -1,10 +1,5 @@
-<input type="text" class="form-control" [mention]="items" [mentionConfig]="{labelKey: 'tag'}">
-
-
-<table class="table table-bordered table-striped">
-    <tr *ngFor="let diagnosis of lstDiagnosis">
-        <!-- <td> {{ objPOsts.ID }} </td> -->
-        <td> {{ objPOsts.title }} </td>
-        <td> {{ objPOsts.body }} </td>
-    </tr>
-</table>
+<textarea   type="text" 
+            class="form-control" 
+            [mention]="diagnosis" 
+            [mentionConfig]="{labelKey: 'Name', disableSort:true }">
+</textarea>

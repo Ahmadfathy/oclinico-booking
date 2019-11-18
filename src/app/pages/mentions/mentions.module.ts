@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { MentionModule } from 'angular-mentions';
 
 import { MentionsRoutingModule } from './mentions-routing.module';
@@ -13,6 +14,7 @@ import { MentionsApiService } from './mentions-api.service';
   imports: [
     CommonModule,
     HttpClientModule,
+    FormsModule,
     MentionModule,
     MentionsRoutingModule
   ],
