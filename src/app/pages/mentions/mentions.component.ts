@@ -20,6 +20,7 @@ export class MentionsComponent implements OnInit {
   getAllDiagnosis() {
     this._mas.getDiagnosis(res => {
       this.diagnosis = res.Diagnosis;
+      console.log(this.diagnosis)
     })
   }
 
